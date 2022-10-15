@@ -69,4 +69,42 @@ img {
 
 body {
   font-family: "Noto Sans JP", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0px 16px;
+  margin: auto;
+}
+
+.header {
+  max-width: 100%;
+  padding: 0px;
+  margin: 0 auto;
+}
+
+.logo {
+  margin: 20px 0px;
+  max-width: 145px;
+  margin-left: 250px;
+}
+
+.header__menu {
+  background-color: black;
+  color: white;
+  font-size: 14px;
+  padding-left: 250px;
+}
+
+.header__list {
+  display: flex;
+  height: 40px;
+  align-items: center;
+}
+.header__list li {
+  margin-right: 60px;
+}
+
+.pick-up__area {
+  margin-top: 40px;
 }/*# sourceMappingURL=travel.css.map */
