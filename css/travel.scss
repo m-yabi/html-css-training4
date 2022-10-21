@@ -35,3 +35,102 @@ body {
 .pick-up__area {
   margin-top: 40px;
 }
+.pick-up {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.pick-up1,
+.pick-up2,
+.pick-up3 {
+  width: 32%;
+  margin: auto;
+}
+.pick-up__text {
+  font-size: 16px;
+  font-weight: bold;
+}
+.pick-up__link {
+  border-bottom: 1px solid black;
+  display: inline-block;
+  margin-left: 145px;
+  font-size: 14px;
+}
+.main__area {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 70px;
+}
+.main {
+  width: 65%;
+}
+.side__bar {
+  width: 31%;
+}
+.main-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.sub-title {
+  display: flex;
+  font-size: 14px;
+  a {
+    margin-right: 20px;
+  }
+}
+.main__photo {
+  margin: 10px 0px;
+}
+.main__text {
+  margin-bottom: 30px;
+}
+.link {
+  border-bottom: 1px solid black;
+  display: inline-block;
+  margin-left: 338px;
+  font-size: 14px;
+  margin-bottom: 80px;
+}
+
+.image {
+  max-width: 130px;
+}
+.plofile__image {
+  border-radius: 50%;
+  object-fit: cover;
+}
+.image {
+  margin: auto;
+}
+.name {
+  text-align: center;
+  margin: 30px 0px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.profile__text {
+  margin-bottom: 30px;
+  font-size: 15px;
+}
+.title {
+  text-align: center;
+  margin: 60px 0px 30px 0px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.ranking__text {
+  margin-bottom: 30px;
+}
+.archive__list {
+  font-size: 14px;
+  li {
+    padding: 20px 0px 20px 20px;
+    border-top: 1px solid #777777;
+  }
+}
+.archive__list li:last-child {
+  border-bottom: 1px solid #777777;
+}
