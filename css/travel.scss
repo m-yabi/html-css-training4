@@ -3,72 +3,111 @@ body {
   font-family: "Noto Sans JP", sans-serif;
 }
 .container {
-  max-width: 1200px;
   padding: 0px 16px;
   margin: auto;
+  @include pc {
+    max-width: 1200px;
+  }
 }
 .header {
-  max-width: 100%;
-  padding: 0px;
-  margin: 0 auto;
+  position: fixed; /* ヘッダーを固定する */
+  z-index: 1;
+  top: 0px; /* 上部から配置の基準位置を決める */
+  width: 100%; /* ヘッダーの横幅を指定する */
+  height: 70px;
+  background-color: white;
 }
-
 .logo {
-  margin: 20px 0px;
   max-width: 145px;
-  margin-left: 250px;
+  @include pc {
+    margin: 20px 0px;
+    margin-left: 200px;
+  }
+  @include sp {
+    margin: 0px 0px 20px 20px;
+    margin-top: 20px;
+  }
 }
 .header__menu {
   background-color: black;
   color: white;
   font-size: 14px;
-  padding-left: 250px;
+  @include pc {
+    padding-left: 200px;
+  }
+  @include sp {
+    padding: 10px 0px 10px 16px;
+    overflow-x: auto;
+    height: 40px;
+  }
 }
 .header__list {
   display: flex;
-  height: 40px;
   align-items: center;
+  @include pc {
+    height: 40px;
+  }
   li {
     margin-right: 60px;
   }
+  @include sp {
+    width: max-content;
+  }
 }
-.pick-up__area {
-  margin-top: 40px;
+main {
+  margin-top: 150px;
+  z-index: 0;
 }
 .pick-up {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
+  @include pc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
 }
 .pick-up1,
 .pick-up2,
 .pick-up3 {
-  width: 32%;
-  margin: auto;
+  @include pc {
+    width: 32%;
+    margin: auto;
+  }
 }
 .pick-up__text {
   font-size: 16px;
   font-weight: bold;
+  @include sp {
+    margin: 10px 0px 15px 0px;
+  }
 }
 .pick-up__link {
   border-bottom: 1px solid black;
   display: inline-block;
   margin-left: 145px;
   font-size: 14px;
+  @include sp {
+    margin-bottom: 30px;
+  }
 }
 .main__area {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
   margin-top: 70px;
-  margin-bottom: 140px;
+  @include pc {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 140px;
+  }
 }
 .main {
-  width: 65%;
+  @include pc {
+    width: 65%;
+  }
 }
 .side__bar {
-  width: 31%;
+  @include pc {
+    width: 31%;
+  }
 }
 .main-title {
   font-size: 24px;
@@ -87,15 +126,22 @@ body {
 }
 .main__text {
   margin-bottom: 30px;
+  @include sp {
+  }
+  padding: 0px 41px;
 }
 .link {
   border-bottom: 1px solid black;
   display: inline-block;
-  margin-left: 338px;
   font-size: 14px;
   margin-bottom: 80px;
+  @include pc {
+    margin-left: 338px;
+  }
+  @include sp {
+    margin-left: 130px;
+  }
 }
-
 .image {
   max-width: 130px;
 }
@@ -124,6 +170,7 @@ body {
 }
 .ranking__text {
   margin-bottom: 30px;
+  font-size: 14px;
 }
 .archive__list {
   font-size: 14px;
@@ -136,24 +183,43 @@ body {
   border-bottom: 1px solid #777777;
 }
 .footer__menu {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: 60px;
+  @include pc {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 60px;
+  }
+}
+.footer__menu:first-child {
+  @include sp {
+    padding-top: 50px;
+  }
 }
 footer {
   background-color: #f7f7f7;
+  @include sp {
+    margin-top: 120px;
+  }
 }
 .about,
 .menu,
 .twitter {
-  width: 30%;
+  @include pc {
+    width: 30%;
+  }
 }
 .footer-title {
-  margin-top: 60px;
   margin-bottom: 30px;
   font-size: 18px;
   font-weight: bold;
+  @include pc {
+    margin-top: 60px;
+  }
+}
+.about {
+  @include sp {
+    margin-bottom: 50px;
+  }
 }
 .arrow::before {
   content: "";
@@ -172,6 +238,7 @@ footer {
   list-style: none;
   padding: 0;
   font-size: 14px;
+  margin-bottom: 5px;
 }
 .footer__text {
   font-size: 14px;
@@ -188,8 +255,16 @@ footer {
 .menu li:last-child {
   border-bottom: 1px solid #777777;
 }
+.twitter {
+  @include sp {
+    margin-top: 30px;
+  }
+}
 .footer-logo {
   text-align: center;
   font-size: 12px;
   padding-bottom: 10px;
+  @include sp {
+    padding-top: 90px;
+  }
 }
