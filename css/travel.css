@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*** The new CSS reset - version 1.5.1 (last updated 1.3.2022) ***/
 *:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {
   all: unset;
@@ -83,10 +82,10 @@ body {
 }
 
 .header {
-  position: fixed; /* ヘッダーを固定する */
+  position: fixed;
   z-index: 1;
-  top: 0px; /* 上部から配置の基準位置を決める */
-  width: 100%; /* ヘッダーの横幅を指定する */
+  top: 0px;
+  width: 100%;
   height: 70px;
   background-color: white;
 }
@@ -97,7 +96,7 @@ body {
 @media (min-width: 751px) {
   .logo {
     margin: 20px 0px;
-    margin-left: 200px;
+    margin-left: 240px;
   }
 }
 @media (max-width: 750px) {
@@ -114,7 +113,7 @@ body {
 }
 @media (min-width: 751px) {
   .header__menu {
-    padding-left: 200px;
+    padding-left: 240px;
   }
 }
 @media (max-width: 750px) {
@@ -180,7 +179,6 @@ main {
 }
 
 .pick-up__link {
-  border-bottom: 1px solid black;
   display: block;
   font-size: 14px;
   text-align: center;
@@ -191,6 +189,24 @@ main {
   .pick-up__link {
     margin-bottom: 30px;
   }
+}
+
+.border-animation {
+  position: relative;
+}
+.border-animation::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid #000;
+  transition: all 0.3s;
+}
+.border-animation:hover::after {
+  opacity: 0;
+  bottom: -5px;
 }
 
 .main__area {
@@ -240,20 +256,12 @@ main {
   padding: 0px 41px;
 }
 .link {
-  border-bottom: 1px solid black;
-  display: inline-block;
+  display: block;
   font-size: 14px;
+  text-align: center;
+  max-width: 83px;
+  margin: auto;
   margin-bottom: 80px;
-}
-@media (min-width: 751px) {
-  .link {
-    margin-left: 338px;
-  }
-}
-@media (max-width: 750px) {
-  .link {
-    margin-left: 130px;
-  }
 }
 
 .image {
@@ -314,7 +322,6 @@ main {
     margin-bottom: 60px;
   }
 }
-
 @media (max-width: 750px) {
   .footer__menu:first-child {
     padding-top: 50px;
@@ -408,4 +415,8 @@ footer {
   .footer-logo {
     padding-top: 90px;
   }
+}
+
+#twitter-widget-0 {
+  width: 200px !important;
 }/*# sourceMappingURL=travel.css.map */

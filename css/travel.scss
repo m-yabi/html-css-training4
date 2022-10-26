@@ -10,10 +10,10 @@ body {
   }
 }
 .header {
-  position: fixed; /* ヘッダーを固定する */
+  position: fixed;
   z-index: 1;
-  top: 0px; /* 上部から配置の基準位置を決める */
-  width: 100%; /* ヘッダーの横幅を指定する */
+  top: 0px;
+  width: 100%;
   height: 70px;
   background-color: white;
 }
@@ -21,7 +21,7 @@ body {
   max-width: 145px;
   @include pc {
     margin: 20px 0px;
-    margin-left: 200px;
+    margin-left: 240px;
   }
   @include sp {
     margin: 0px 0px 20px 20px;
@@ -33,7 +33,7 @@ body {
   color: white;
   font-size: 14px;
   @include pc {
-    padding-left: 200px;
+    padding-left: 240px;
   }
   @include sp {
     padding: 10px 0px 10px 16px;
@@ -83,7 +83,6 @@ main {
   }
 }
 .pick-up__link {
-  border-bottom: 1px solid black;
   display: block;
   font-size: 14px;
   text-align: center;
@@ -91,6 +90,25 @@ main {
   margin: auto;
   @include sp {
     margin-bottom: 30px;
+  }
+}
+.border-animation {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid #000;
+    transition: all 0.3s;
+  }
+  &:hover {
+    &::after {
+      opacity: 0;
+      bottom: -5px;
+    }
   }
 }
 .main__area {
@@ -134,16 +152,12 @@ main {
   padding: 0px 41px;
 }
 .link {
-  border-bottom: 1px solid black;
-  display: inline-block;
+  display: block;
   font-size: 14px;
+  text-align: center;
+  max-width: 83px;
+  margin: auto;
   margin-bottom: 80px;
-  @include pc {
-    margin-left: 338px;
-  }
-  @include sp {
-    margin-left: 130px;
-  }
 }
 .image {
   max-width: 130px;
@@ -192,10 +206,10 @@ main {
     width: 100%;
     margin-bottom: 60px;
   }
-}
-.footer__menu:first-child {
-  @include sp {
-    padding-top: 50px;
+  &:first-child {
+    @include sp {
+      padding-top: 50px;
+    }
   }
 }
 footer {
@@ -270,4 +284,7 @@ footer {
   @include sp {
     padding-top: 90px;
   }
+}
+#twitter-widget-0 {
+  width: 200px !important;
 }
